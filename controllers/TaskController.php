@@ -270,10 +270,10 @@ class TaskController extends Controller
         $time = date("Y-m-d H:i:s");
         $msg = <<<HTML
 [$time] 项目发布成功!
-{$params['project_name']}, {$params['project_level']}
+{$params['project_level']} - {$params['project_name']}
 
 {$params['title']}
-commit_id: {$params['commit_id']}
+(branch {$params['branch']} 版本号：{$params['commit_id']})
 
 快去查看新上线的功能吧！！！
 HTML;
