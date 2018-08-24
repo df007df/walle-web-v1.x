@@ -241,6 +241,8 @@ class TaskController extends Controller
             return;
         }
 
+        $testUrl = "http://100.69.161.209/test_report/{$task->project->name}/{$task->commit_id}.html";
+
         $params = [
             'title' => $task->title,
             'commit_id' => $task->commit_id,
@@ -248,7 +250,8 @@ class TaskController extends Controller
             'project_name' => $task->project->name,
             'project_version' => $task->project->version,
             'project_level' => yii::t('w', 'conf_level_' . $task->project->level),
-            'dingding' => explode("\r\n", $task->project->dingding)
+            'dingding' => explode("\r\n", $task->project->dingding),
+            'test_url' => $testUrl
         ];
 
 
@@ -274,6 +277,9 @@ class TaskController extends Controller
 
 {$params['title']}
 (branch {$params['branch']} 版本号：{$params['commit_id']})
+
+测试用例:
+{$params['test_url']}
 
 快去查看新上线的功能吧！！！
 HTML;
