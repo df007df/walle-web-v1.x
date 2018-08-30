@@ -114,7 +114,7 @@ class Task extends Ansible
         $pattern = [
             '#{WORKSPACE}#',
             '#{VERSION}#',
-            '#{version}#'
+            '#{VV}#'
         ];
         $replace = [
             $workspace,
