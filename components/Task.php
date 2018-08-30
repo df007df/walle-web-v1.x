@@ -10,7 +10,8 @@ namespace app\components;
 
 use app\models\Project;
 
-class Task extends Ansible {
+class Task extends Ansible
+{
 
     /**
      * pre-deploy部署代码前置触发任务
@@ -18,7 +19,8 @@ class Task extends Ansible {
      *
      * @return bool
      */
-    public function preDeploy($version) {
+    public function preDeploy($version)
+    {
         $tasks = GlobalHelper::str2arr($this->getConfig()->pre_deploy);
         if (empty($tasks)) return true;
 
@@ -47,7 +49,8 @@ class Task extends Ansible {
      *
      * @return bool
      */
-    public function postDeploy($version) {
+    public function postDeploy($version)
+    {
         $tasks = GlobalHelper::str2arr($this->getConfig()->post_deploy);
         if (empty($tasks)) return true;
 
@@ -73,7 +76,8 @@ class Task extends Ansible {
     /**
      * 设置了版本保留数量，超出了设定值，则删除老版本
      */
-    public function cleanUpReleasesVersion() {
+    public function cleanUpReleasesVersion()
+    {
 
         $ansibleStatus = Project::getAnsibleStatus();
 
@@ -98,21 +102,24 @@ class Task extends Ansible {
      * @param $version string
      * @return string string
      */
-    public static function getRemoteTaskCommand($task, $version) {
+    public static function getRemoteTaskCommand($task, $version)
+    {
         $tasks = GlobalHelper::str2arr($task);
         if (empty($tasks)) return '';
 
         // 可能要做一些依赖环境变量的命令操作
         $cmd = ['. /etc/profile'];
         $workspace = Project::getTargetWorkspace();
-        $version   = Project::getReleaseVersionDir($version);
+        $versionPath = Project::getReleaseVersionDir($version);
         $pattern = [
             '#{WORKSPACE}#',
             '#{VERSION}#',
+            '#{version}#'
         ];
         $replace = [
             $workspace,
-            $version,
+            $versionPath,
+            $version
         ];
 
         // 简化用户切换目录，直接切换到当前的版本目录：{release_library}/{project}/{version}
@@ -127,11 +134,12 @@ class Task extends Ansible {
      * 执行远程服务器任务集合
      * 对于目标机器更多的时候是一台机器完成一组命令，而不是每条命令逐台机器执行
      *
-     * @param array   $tasks
+     * @param array $tasks
      * @param integer $delay 每台机器延迟执行post_release任务间隔, 不推荐使用, 仅当业务无法平滑重启时使用
      * @return mixed
      */
-    public function runRemoteTaskCommandPackage($tasks, $delay = 0) {
+    public function runRemoteTaskCommandPackage($tasks, $delay = 0)
+    {
 
         $task = join(' && ', $tasks);
 
