@@ -100,9 +100,10 @@ class Task extends Ansible
      *
      * @param $task    string
      * @param $version string
+     * @param $taskMode \app\models\Task
      * @return string string
      */
-    public static function getRemoteTaskCommand($task, $version, $task = null)
+    public static function getRemoteTaskCommand($task, $version, $taskMode = null)
     {
         $tasks = GlobalHelper::str2arr($task);
         if (empty($tasks)) return '';
@@ -121,7 +122,7 @@ class Task extends Ansible
             $workspace,
             $versionPath,
             $version,
-            $task ? $task->commit_id : '',
+            $taskMode ? $taskMode->commit_id : '',
         ];
 
         // 简化用户切换目录，直接切换到当前的版本目录：{release_library}/{project}/{version}
