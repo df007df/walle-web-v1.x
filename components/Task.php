@@ -102,7 +102,7 @@ class Task extends Ansible
      * @param $version string
      * @return string string
      */
-    public static function getRemoteTaskCommand($task, $version)
+    public static function getRemoteTaskCommand($task, $version, $task = null)
     {
         $tasks = GlobalHelper::str2arr($task);
         if (empty($tasks)) return '';
@@ -114,12 +114,14 @@ class Task extends Ansible
         $pattern = [
             '#{WORKSPACE}#',
             '#{VERSION}#',
-            '#{VV}#'
+            '#{VV}#',
+            '#{COMMIT}#'
         ];
         $replace = [
             $workspace,
             $versionPath,
-            $version
+            $version,
+            $task ? $task->commit_id : '',
         ];
 
         // 简化用户切换目录，直接切换到当前的版本目录：{release_library}/{project}/{version}
