@@ -523,11 +523,11 @@ class WalleController extends Controller
      * @param integer $delay 每台机器延迟执行post_release任务间隔, 不推荐使用, 仅当业务无法平滑重启时使用
      * @throws \Exception
      */
-    private function _updateRemoteServers($version, $delay = 0, $task = null)
+    private function _updateRemoteServers($version, $delay = 0, $taskMode = null)
     {
         $cmd = [];
         // pre-release task
-        if (($preRelease = WalleTask::getRemoteTaskCommand($this->conf->pre_release, $version))) {
+        if (($preRelease = WalleTask::getRemoteTaskCommand($this->conf->pre_release, $version, $taskMode))) {
             $cmd[] = $preRelease;
         }
         // link
@@ -535,7 +535,7 @@ class WalleController extends Controller
             $cmd[] = $linkCmd;
         }
         // post-release task
-        if (($postRelease = WalleTask::getRemoteTaskCommand($this->conf->post_release, $version))) {
+        if (($postRelease = WalleTask::getRemoteTaskCommand($this->conf->post_release, $version, $taskMode))) {
             $cmd[] = $postRelease;
         }
 
