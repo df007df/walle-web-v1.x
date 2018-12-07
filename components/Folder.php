@@ -12,7 +12,29 @@ use Yii;
 use app\models\Project;
 use app\models\Task as TaskModel;
 
-class Folder extends Ansible {
+class Folder extends Ansible
+{
+
+    /**
+     * @param $config \yii\db\ActiveQuery
+     * @return Folder
+     */
+    public static function instance($config)
+    {
+        $isRsync = "is_rsync";
+
+        $isRsync = true;
+
+        $folder = null;
+        if ($isRsync) {
+            $folder = new FolderRsync($config);
+        } else {
+            $folder = new Folder($config);
+        }
+
+        return $folder;
+    }
+
 
     /**
      * 初始化宿主机部署工作空间
@@ -20,7 +42,8 @@ class Folder extends Ansible {
      * @param TaskModel $task
      * @return bool|int
      */
-    public function initLocalWorkspace(TaskModel $task) {
+    public function initLocalWorkspace(TaskModel $task)
+    {
 
         $version = $task->link_id;
         $branch = $task->branch;
@@ -44,7 +67,8 @@ class Folder extends Ansible {
      * @param $log
      * @return bool
      */
-    public function initRemoteVersion($version) {
+    public function initRemoteVersion($version)
+    {
 
         $command = sprintf('mkdir -p %s', Project::getReleaseVersionDir($version));
 
@@ -66,7 +90,8 @@ class Folder extends Ansible {
      * @return bool
      * @throws \Exception
      */
-    public function scpCopyFiles(Project $project, TaskModel $task) {
+    public function scpCopyFiles(Project $project, TaskModel $task)
+    {
 
         // 1. 宿主机 tar 打包
         $this->_packageFiles($project, $task);
@@ -91,7 +116,8 @@ class Folder extends Ansible {
      * @return bool
      * @throws \Exception
      */
-    public function ansibleCopyFiles(Project $project, TaskModel $task) {
+    public function ansibleCopyFiles(Project $project, TaskModel $task)
+    {
 
         // 1. 宿主机 tar 打包
         $this->_packageFiles($project, $task);
@@ -111,11 +137,12 @@ class Folder extends Ansible {
      * @return bool
      * @throws \Exception
      */
-    protected function _packageFiles(Project $project, TaskModel $task) {
+    protected function _packageFiles(Project $project, TaskModel $task)
+    {
 
         $version = $task->link_id;
         $files = $task->getCommandFiles();
-        $excludes = GlobalHelper::str2arr($project->excludes) ;
+        $excludes = GlobalHelper::str2arr($project->excludes);
         $packagePath = Project::getDeployPackagePath($version);
         $packageCommand = sprintf('cd %s && tar -p %s -cz -f %s %s',
             escapeshellarg(rtrim(Project::getDeployWorkspace($version), '/') . '/'),
@@ -138,7 +165,8 @@ class Folder extends Ansible {
      * @return bool
      * @throws \Exception
      */
-    protected function _copyPackageToServer($remoteHost, Project $project, TaskModel $task) {
+    protected function _copyPackageToServer($remoteHost, Project $project, TaskModel $task)
+    {
 
         $version = $task->link_id;
         $packagePath = Project::getDeployPackagePath($version);
@@ -167,7 +195,8 @@ class Folder extends Ansible {
      * @return bool
      * @throws \Exception
      */
-    protected function _copyPackageToServerByAnsible(Project $project, TaskModel $task) {
+    protected function _copyPackageToServerByAnsible(Project $project, TaskModel $task)
+    {
 
         $version = $task->link_id;
         $packagePath = Project::getDeployPackagePath($version);
@@ -187,7 +216,8 @@ class Folder extends Ansible {
      * @return bool
      * @throws \Exception
      */
-    protected function _unpackageFiles(Project $project, TaskModel $task) {
+    protected function _unpackageFiles(Project $project, TaskModel $task)
+    {
 
         $version = $task->link_id;
         $releasePackage = Project::getReleaseVersionPackage($version);
@@ -224,7 +254,8 @@ class Folder extends Ansible {
      * @return bool
      * @throws \Exception
      */
-    protected function _unpackageFilesByAnsible(Project $project, TaskModel $task) {
+    protected function _unpackageFilesByAnsible(Project $project, TaskModel $task)
+    {
 
         $version = $task->link_id;
         $releasePackage = Project::getReleaseVersionPackage($version);
@@ -261,7 +292,8 @@ class Folder extends Ansible {
      * @param null $version
      * @return bool
      */
-    public function getLinkCommand($version) {
+    public function getLinkCommand($version)
+    {
         $user = $this->config->release_user;
         $project = Project::getGitProjectName($this->getConfig()->repo_url);
         $currentTmp = sprintf('%s/%s/current-%s.tmp', rtrim($this->getConfig()->release_library, '/'), $project, $project);
@@ -280,7 +312,8 @@ class Folder extends Ansible {
      * @param $file
      * @return bool
      */
-    public function getFileMd5($file) {
+    public function getFileMd5($file)
+    {
         $cmd[] = "test -f /usr/bin/md5sum && md5sum {$file}";
         $command = join(' && ', $cmd);
 
@@ -298,7 +331,8 @@ class Folder extends Ansible {
      * @param array $excludes
      * @return string
      */
-    protected function excludes($excludes) {
+    protected function excludes($excludes)
+    {
 
         $excludesCmd = '';
 
@@ -320,7 +354,8 @@ class Folder extends Ansible {
      * @param $version
      * @return bool|int
      */
-    public function cleanUpLocal($version) {
+    public function cleanUpLocal($version)
+    {
         $cmd[] = 'rm -rf ' . Project::getDeployWorkspace($version);
         $cmd[] = sprintf('rm -f %s/*.tar.gz', dirname(Project::getDeployPackagePath($version)));
         $command = join(' && ', $cmd);
@@ -333,7 +368,8 @@ class Folder extends Ansible {
      * @param $projectDir
      * @return bool|int
      */
-    public function removeLocalProjectWorkspace($projectDir) {
+    public function removeLocalProjectWorkspace($projectDir)
+    {
         $cmd[] = "rm -rf " . $projectDir;
         $command = join(' && ', $cmd);
         return $this->runLocalCommand($command);

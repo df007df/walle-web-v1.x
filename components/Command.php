@@ -83,7 +83,7 @@ class Command
         $this->log = trim($log);
 
         $this->log($log);
-        $this->log('---------------------------------');
+        $this->log('---------------------------------@' . $this->status);
 
         return $this->status;
     }
@@ -91,7 +91,7 @@ class Command
     /**
      * 执行远程目标机器命令
      *
-     * @param string  $command
+     * @param string $command
      * @param integer $delay 每台机器延迟执行post_release任务间隔, 不推荐使用, 仅当业务无法平滑重启时使用
      * @return bool
      */
@@ -116,7 +116,6 @@ class Command
 
             $log = $this->log;
             $this->status = $this->runLocalCommand($localCommand);
-
             $this->log = $log . (($log ? PHP_EOL : '') . $remoteHost . ' : ' . $this->log);
             if (!$this->status) {
                 return false;

@@ -1,6 +1,6 @@
 <?php
 // Uncomment to enable debug mode. Recommended for development.
-defined('YII_DEBUG') or define('YII_DEBUG', false);
+defined('YII_DEBUG') or define('YII_DEBUG', true);
 
 // Uncomment to enable dev environment. Recommended for development
 defined('YII_ENV') or define('YII_ENV', 'prod');
