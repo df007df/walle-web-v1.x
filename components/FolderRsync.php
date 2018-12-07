@@ -22,6 +22,33 @@ class FolderRsync extends Folder
 
 
     /**
+     * 初始化宿主机部署工作空间
+     *
+     * @param TaskModel $task
+     * @return bool|int
+     */
+    public function initLocalWorkspace(TaskModel $task)
+    {
+
+        $version = $task->link_id;
+        $branch = $task->branch;
+
+//        if ($this->config->repo_type == Project::REPO_SVN) {
+//            // svn cp 过来指定分支的目录, 然后 svn up 到指定版本
+//            $cmd[] = sprintf('cp -rfa %s %s ', Project::getSvnDeployBranchFromDir($branch), Project::getDeployWorkspace($version));
+//        } else {
+//            // git cp 仓库, 然后 checkout 切换分支, up 到指定版本
+//            $cmd[] = sprintf('cp -rfa %s %s ', Project::getDeployFromDir(), Project::getDeployWorkspace($version));
+//        }
+
+        $cmd[] = sprintf('ln -s %s %s ', Project::getDeployFromDir(), Project::getDeployWorkspace($version));
+
+        $command = join(' && ', $cmd);
+        return $this->runLocalCommand($command);
+    }
+
+
+    /**
      * 将多个文件/目录通过tar + scp传输到指定的多个目标机
      *
      * @param Project $project
