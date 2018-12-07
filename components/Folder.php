@@ -50,10 +50,10 @@ class Folder extends Ansible
 
         if ($this->config->repo_type == Project::REPO_SVN) {
             // svn cp 过来指定分支的目录, 然后 svn up 到指定版本
-            $cmd[] = sprintf('cp -rf %s %s ', Project::getSvnDeployBranchFromDir($branch), Project::getDeployWorkspace($version));
+            $cmd[] = sprintf('cp -rfp %s %s ', Project::getSvnDeployBranchFromDir($branch), Project::getDeployWorkspace($version));
         } else {
             // git cp 仓库, 然后 checkout 切换分支, up 到指定版本
-            $cmd[] = sprintf('cp -rf %s %s ', Project::getDeployFromDir(), Project::getDeployWorkspace($version));
+            $cmd[] = sprintf('cp -rfp %s %s ', Project::getDeployFromDir(), Project::getDeployWorkspace($version));
         }
         $command = join(' && ', $cmd);
         return $this->runLocalCommand($command);
