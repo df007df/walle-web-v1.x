@@ -119,7 +119,7 @@ class FolderRsync extends Folder
         $exVersion = $project->version;
         $extReleasePath = Project::getReleaseVersionDir($exVersion);
         $excludes = GlobalHelper::str2arr($project->excludes);
-        $cmd[] = sprintf('rsync -az %s %s/* %s',
+        $cmd[] = sprintf('rsync -a %s %s/* %s',
             $this->excludes($excludes),
             $extReleasePath,
             $releasePath
@@ -136,7 +136,7 @@ class FolderRsync extends Folder
 
         foreach (Project::getHosts() as $remoteHost) {
             // 循环 scp 传输
-            $command = sprintf('rsync -avz --delete %s %s/* %s@%s:%s',
+            $command = sprintf('rsync -rtopDlvz --delete %s %s/* %s@%s:%s',
                 $this->excludes($excludes),
                 $releaseDeployPath,
                 escapeshellarg($this->getConfig()->release_user),
