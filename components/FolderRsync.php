@@ -175,7 +175,7 @@ class FolderRsync extends Folder
 
         foreach (Project::getHosts() as $remoteHost) {
             // 循环 scp 传输
-            $command = sprintf('rsync -rtopDlvz --delete %s %s/* %s@%s:%s',
+            $command = sprintf('rsync -rtopgDlvz --delete %s %s/* %s@%s:%s',
                 $this->excludes($excludes),
                 $releaseDeployPath,
                 escapeshellarg($this->getConfig()->release_user),
