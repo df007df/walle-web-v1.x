@@ -80,7 +80,7 @@ class WalleController extends Controller
         // 项目配置
         $this->conf = Project::getConf($this->task->project_id);
         $this->walleTask = new WalleTask($this->conf);
-        $this->walleFolder = Folder::instance($this->conf);
+        $this->walleFolder = Folder::instance($this->conf, $this->task);
         try {
             if ($this->task->action == TaskModel::ACTION_ONLINE) {
                 $this->_makeVersion();

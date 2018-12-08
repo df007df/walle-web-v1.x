@@ -8,6 +8,8 @@
  * *****************************************************************/
 namespace app\components;
 
+use app\models\Record;
+use app\models\Task;
 use Yii;
 use app\models\Project;
 use app\models\Task as TaskModel;
@@ -19,15 +21,35 @@ class Folder extends Ansible
      * @param $config \yii\db\ActiveQuery
      * @return Folder
      */
-    public static function instance($config)
+    public static function instance($config, Task $task)
     {
-        $isRsync = "is_rsync";
 
-        $isRsync = true;
-
+        $isRsync = $config->rsync;
         $folder = null;
-        if ($isRsync) {
+        if ($isRsync == 1) {
+
+            //检查还有其他发布
+            $taskMode = Task::find()->where("project_id = :project_id AND id < :taskid ", [
+                ':project_id' => $config->id,
+                ':taskid' => $task->id,
+            ])->orderBy('id desc')->one();
+
             $folder = new FolderRsync($config);
+
+            if ($taskMode->status != Task::STATUS_DONE) {
+
+                $task->status = TaskModel::STATUS_FAILED;
+                $task->save();
+
+                $folder = new FolderRsync($config);
+                $folder->setExeLog("初始化执行任务失败，还有未发布完成任务 [{$taskMode->title}]，请稍后重试！");
+                $folder->setExeStatus(0);
+                Record::saveRecord($folder, $task->id, Record::ACTION_PERMSSION, 0);
+
+
+                throw new \Exception("初始化执行任务失败，还有未发布完成任务，请稍后重试！");
+            }
+
         } else {
             $folder = new Folder($config);
         }

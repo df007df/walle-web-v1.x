@@ -21,6 +21,18 @@ class FolderRsync extends Folder
 {
 
 
+    public function setExeStatus($status)
+    {
+        $this->status = $status;
+    }
+
+
+    public function setExeLog($log)
+    {
+        $this->log = $log;
+    }
+
+
     /**
      * 初始化宿主机部署工作空间
      *
