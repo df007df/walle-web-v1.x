@@ -2,4 +2,4 @@
 /config/local.php
 tests/_output/*
 .idea/
-/runtime/*
+/runtime/logs/*
