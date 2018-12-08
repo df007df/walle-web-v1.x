@@ -38,6 +38,7 @@ use yii\db\Expression;
  * @property integer $keep_version_num
  * @property \DateTime $created_at
  * @property \DateTime $updated_at
+ * @property integer rsync
  */
 class Project extends \yii\db\ActiveRecord
 {
@@ -106,7 +107,7 @@ class Project extends \yii\db\ActiveRecord
     {
         return [
             [['user_id', 'repo_url', 'name', 'level', 'deploy_from', 'release_user', 'release_to', 'release_library', 'hosts', 'keep_version_num'], 'required'],
-            [['user_id', 'level', 'status', 'post_release_delay', 'audit', 'ansible', 'keep_version_num'], 'integer'],
+            [['user_id', 'level', 'status', 'post_release_delay', 'audit', 'ansible', 'keep_version_num', 'rsync'], 'integer'],
             [['excludes', 'hosts', 'pre_deploy', 'post_deploy', 'pre_release', 'post_release', 'dingding'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['name', 'repo_password'], 'string', 'max' => 100],
@@ -149,7 +150,8 @@ class Project extends \yii\db\ActiveRecord
             'audit' => '任务需要审核？',
             'ansible' => '开启Ansible？',
             'keep_version_num' => '线上版本保留数',
-            'dingding' => '钉钉机器人hook'
+            'dingding' => '钉钉机器人hook',
+            'rsync' => '是否使用rsync'
         ];
     }
 

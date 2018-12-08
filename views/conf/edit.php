@@ -320,6 +320,16 @@ use yii\widgets\ActiveForm;
         </div>
 
         <div class="form-group">
+            <label class="text-right bolder blue" for="form-field-2">
+                <?= yii::t('conf', '是否使用rsync同步发布代码') ?>
+                <input name="Project[rsync]" value="0" type="hidden">
+                <input name="Project[rsync]" value="1" type="checkbox" <?= $conf->rsync ? 'checked' : '' ?>
+                       class="ace ace-switch ace-switch-5"  data-rel="tooltip" data-title="<?= yii::t('conf', 'ansible tip') ?>" data-placement="right">
+                <span class="lbl"></span>
+            </label>
+        </div>
+
+        <div class="form-group">
             <label class="text-right bolder blue">
                 <?= yii::t('conf', 'enable open') ?>
                 <input name="Project[status]" value="0" type="hidden">

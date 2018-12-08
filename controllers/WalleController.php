@@ -36,6 +36,7 @@ class WalleController extends Controller
 
     /**
      * Walle的高级任务
+     * @var \app\components\Task
      */
     protected $walleTask;
 
@@ -45,7 +46,7 @@ class WalleController extends Controller
     protected $ansible;
 
     /**
-     * Walle的文件目录操作
+     * @var \app\components\Folder
      */
     protected $walleFolder;
 
@@ -79,7 +80,7 @@ class WalleController extends Controller
         // 项目配置
         $this->conf = Project::getConf($this->task->project_id);
         $this->walleTask = new WalleTask($this->conf);
-        $this->walleFolder = new Folder($this->conf);
+        $this->walleFolder = Folder::instance($this->conf, $this->task);
         try {
             if ($this->task->action == TaskModel::ACTION_ONLINE) {
                 $this->_makeVersion();
