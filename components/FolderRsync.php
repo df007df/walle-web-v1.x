@@ -53,7 +53,7 @@ class FolderRsync extends Folder
 //            $cmd[] = sprintf('cp -rfa %s %s ', Project::getDeployFromDir(), Project::getDeployWorkspace($version));
 //        }
 
-        $cmd[] = sprintf('ln -s %s %s ', Project::getDeployFromDir(), Project::getDeployWorkspace($version));
+        $cmd[] = sprintf('ln -sb %s %s ', Project::getDeployFromDir(), Project::getDeployWorkspace($version));
 
         $command = join(' && ', $cmd);
         return $this->runLocalCommand($command);
