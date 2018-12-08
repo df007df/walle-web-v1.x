@@ -11568,3 +11568,277 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1544244350.9035
     'REQUEST_TIME' => 1544244350
 ]
+2018-12-08 12:49:04 [127.0.0.1][1][6cc3hbfd4hdgn5v7m4m82e41l4][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "dist/css/bootstrap.min.css.map". in /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('dist/css/bootst...', Array)
+#1 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/df/work/www/walle-web/web/index.php(11): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: 页面未找到。 in /Users/df/work/www/walle-web/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/df/work/www/walle-web/web/index.php(11): yii\base\Application->run()
+#2 {main}
+2018-12-08 12:49:04 [127.0.0.1][1][6cc3hbfd4hdgn5v7m4m82e41l4][info][application] $_COOKIE = [
+    'cnz' => 'iwQxFLOQwEwCAYVLeCr1LGfI'
+    'UM_distinctid' => '16610682ac4ae-086b20786cc4f8-34687809-1fa400-16610682ac5229'
+    '_ga' => 'GA1.2.1339553540.1538296801'
+    'CLOSE_HELP_GUIDE' => 'true'
+    'rmStore' => 'amid:43301'
+    'Hm_lvt_5fc7354aff3dd67a6435818b8ef02b52' => '1543550237'
+    'cna' => 'ceSGFJYeBmICAXkAHcXzLJgx'
+    'ping_test' => 'true'
+    't' => 'f4f90df9d4be1cc9113ef342262c23b0'
+    '_tb_token_' => 'ee809fbe17963'
+    'cookie2' => '15235089a87093e621ea3442af547740'
+    'aliyun_choice' => 'CN'
+    'dauth_proxy_token_name' => 'login_aliyunid_ticket,mini_login_aliyunid_ticket'
+    'dauth_proxy_encoding' => 'UTF-8'
+    'dauth_sso_token' => 'J1QvDz6eqkqzuOkx8DXLFaBzQL8Ca9G0xwhmKPu6ls83+2B7YyN1eeGmO/GFpNjquPD6K8OEEY21uotFYCvQMlppSMOSD6FllXNqSVjh4/WcXcLL3EvFnsJLVKYa7IiyA0OiobGIjcf/Ae2z/25AGwCGY6h41m9kI+0WZgdzrKI8aPgpWTkU346xrz7xQBj3ae1iEcY+Wgf1tgdOuT9iBRFqptmgXV490PZIZGryrtU8ZG+Dfeq1ZQtJbEy+d3pHui9Xdv6Vt3Q='
+    'csg' => '8350855a'
+    '_gid' => 'GA1.2.484687469.1544177410'
+    'isg' => 'BPr6F_4xcn9nk_4Zgbq4cTqvSyYCgDfylE81WATztw3K95gx7TsvlG8GQ-OO4PYd'
+    '_csrf' => 'c1118fd4eb053a5f3cdbd69bbd7826f4945c43d6344459164d6d4090568a6179a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NY4jQlmKni5CVM6xyxVWoFnMYruOMPvQ\";}'
+    '_identity' => '1b83b5f6dcb335cfec411046518422e941ef82aaaeed713cd2f297e24e4404c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"cJIrTa_b2Hnjn6BZkrL8PJkYto2Ael3O\",2592000]\";}'
+    'login_aliyunid' => '\"df0****@service.aliyun.com\"'
+    'login_aliyunid_ticket' => 'dlDRRjf_8NpoU_BOTwChTBoNM1ZJeedfK9zxYnbN5hossqIZCr6t7SGxRigm2Cb4fGaCdBZWIzmgdHq6sXXZQg4KFWufyvpeV*0*Cm58slMT1tJw3_d$$RNZDh7ZZ3Yn*lHEBL6n3EozWFVp*VVx_l0e0'
+    'login_aliyunid_csrf' => '_csrf_tk_1623544206097632'
+    'login_aliyunid_suid' => '\" G/b5URTPPKk4Dh9Vx4uU/PLggKBpqU H/KgcowSbcKQh4l9evU=\"'
+    'login_aliyunid_pk' => '5264730847398936'
+    'login_aliyunid_pks' => '\"IV 2icYV2EmoqP6GC8 RhhSEFw/DY8DKgLWRz5ucKIxq/M=\"'
+    'login_aliyunid_token' => '\"VvlLUUAE/5nhc25cTsPh5X 7BRULA/wQlLY1EIspjRY=\"'
+    'hssid' => '6vHR43mK2Lrp8NuoaLx6W0g1'
+    'hsite' => '6'
+    'aliyun_country' => 'SG'
+    'aliyun_site' => 'INTL'
+    'aliyun_lang' => 'en'
+    'PHPSESSID' => '6cc3hbfd4hdgn5v7m4m82e41l4'
+    'Hm_lpvt_5fc7354aff3dd67a6435818b8ef02b52' => '1544244320'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'df'
+    'HOME' => '/Users/df'
+    'HTTP_COOKIE' => 'cnz=iwQxFLOQwEwCAYVLeCr1LGfI; UM_distinctid=16610682ac4ae-086b20786cc4f8-34687809-1fa400-16610682ac5229; _ga=GA1.2.1339553540.1538296801; CLOSE_HELP_GUIDE=true; rmStore=amid:43301; Hm_lvt_5fc7354aff3dd67a6435818b8ef02b52=1543550237; cna=ceSGFJYeBmICAXkAHcXzLJgx; ping_test=true; t=f4f90df9d4be1cc9113ef342262c23b0; _tb_token_=ee809fbe17963; cookie2=15235089a87093e621ea3442af547740; aliyun_choice=CN; dauth_proxy_token_name=login_aliyunid_ticket%2Cmini_login_aliyunid_ticket; dauth_proxy_encoding=UTF-8; dauth_sso_token=J1QvDz6eqkqzuOkx8DXLFaBzQL8Ca9G0xwhmKPu6ls83%2B2B7YyN1eeGmO%2FGFpNjquPD6K8OEEY21uotFYCvQMlppSMOSD6FllXNqSVjh4%2FWcXcLL3EvFnsJLVKYa7IiyA0OiobGIjcf%2FAe2z%2F25AGwCGY6h41m9kI%2B0WZgdzrKI8aPgpWTkU346xrz7xQBj3ae1iEcY%2BWgf1tgdOuT9iBRFqptmgXV490PZIZGryrtU8ZG%2BDfeq1ZQtJbEy%2Bd3pHui9Xdv6Vt3Q%3D; csg=8350855a; _gid=GA1.2.484687469.1544177410; isg=BPr6F_4xcn9nk_4Zgbq4cTqvSyYCgDfylE81WATztw3K95gx7TsvlG8GQ-OO4PYd; _csrf=c1118fd4eb053a5f3cdbd69bbd7826f4945c43d6344459164d6d4090568a6179a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NY4jQlmKni5CVM6xyxVWoFnMYruOMPvQ%22%3B%7D; _identity=1b83b5f6dcb335cfec411046518422e941ef82aaaeed713cd2f297e24e4404c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22cJIrTa_b2Hnjn6BZkrL8PJkYto2Ael3O%22%2C2592000%5D%22%3B%7D; Hm_lvt_5fc7354aff3dd67a6435818b8ef02b52=1543550237; login_aliyunid=\"df0****@service.aliyun.com\"; login_aliyunid_ticket=dlDRRjf_8NpoU_BOTwChTBoNM1ZJeedfK9zxYnbN5hossqIZCr6t7SGxRigm2Cb4fGaCdBZWIzmgdHq6sXXZQg4KFWufyvpeV*0*Cm58slMT1tJw3_d$$RNZDh7ZZ3Yn*lHEBL6n3EozWFVp*VVx_l0e0; login_aliyunid_csrf=_csrf_tk_1623544206097632; login_aliyunid_suid=\"+G/b5URTPPKk4Dh9Vx4uU/PLggKBpqU+H/KgcowSbcKQh4l9evU=\"; login_aliyunid_pk=5264730847398936; login_aliyunid_pks=\"IV+2icYV2EmoqP6GC8+RhhSEFw/DY8DKgLWRz5ucKIxq/M=\"; login_aliyunid_token=\"VvlLUUAE/5nhc25cTsPh5X+7BRULA/wQlLY1EIspjRY=\"; hssid=6vHR43mK2Lrp8NuoaLx6W0g1; hsite=6; aliyun_country=SG; aliyun_site=INTL; aliyun_lang=en; PHPSESSID=6cc3hbfd4hdgn5v7m4m82e41l4; Hm_lpvt_5fc7354aff3dd67a6435818b8ef02b52=1544244320; Hm_lpvt_5fc7354aff3dd67a6435818b8ef02b52=1544244528'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'dev.walle.edu.aliyun.com'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'dev.walle.edu.aliyun.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64052'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.12.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/df/work/www/walle-web/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/dist/css/bootstrap.min.css.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Users/df/work/www/walle-web/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1544244544.0539
+    'REQUEST_TIME' => 1544244544
+]
+2018-12-08 12:49:09 [127.0.0.1][1][6cc3hbfd4hdgn5v7m4m82e41l4][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "dist/css/bootstrap.min.css.map". in /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('dist/css/bootst...', Array)
+#1 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/df/work/www/walle-web/web/index.php(11): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: 页面未找到。 in /Users/df/work/www/walle-web/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/df/work/www/walle-web/web/index.php(11): yii\base\Application->run()
+#2 {main}
+2018-12-08 12:49:09 [127.0.0.1][1][6cc3hbfd4hdgn5v7m4m82e41l4][info][application] $_COOKIE = [
+    'cnz' => 'iwQxFLOQwEwCAYVLeCr1LGfI'
+    'UM_distinctid' => '16610682ac4ae-086b20786cc4f8-34687809-1fa400-16610682ac5229'
+    '_ga' => 'GA1.2.1339553540.1538296801'
+    'CLOSE_HELP_GUIDE' => 'true'
+    'rmStore' => 'amid:43301'
+    'Hm_lvt_5fc7354aff3dd67a6435818b8ef02b52' => '1543550237'
+    'cna' => 'ceSGFJYeBmICAXkAHcXzLJgx'
+    'ping_test' => 'true'
+    't' => 'f4f90df9d4be1cc9113ef342262c23b0'
+    '_tb_token_' => 'ee809fbe17963'
+    'cookie2' => '15235089a87093e621ea3442af547740'
+    'aliyun_choice' => 'CN'
+    'dauth_proxy_token_name' => 'login_aliyunid_ticket,mini_login_aliyunid_ticket'
+    'dauth_proxy_encoding' => 'UTF-8'
+    'dauth_sso_token' => 'J1QvDz6eqkqzuOkx8DXLFaBzQL8Ca9G0xwhmKPu6ls83+2B7YyN1eeGmO/GFpNjquPD6K8OEEY21uotFYCvQMlppSMOSD6FllXNqSVjh4/WcXcLL3EvFnsJLVKYa7IiyA0OiobGIjcf/Ae2z/25AGwCGY6h41m9kI+0WZgdzrKI8aPgpWTkU346xrz7xQBj3ae1iEcY+Wgf1tgdOuT9iBRFqptmgXV490PZIZGryrtU8ZG+Dfeq1ZQtJbEy+d3pHui9Xdv6Vt3Q='
+    'csg' => '8350855a'
+    '_gid' => 'GA1.2.484687469.1544177410'
+    'isg' => 'BPr6F_4xcn9nk_4Zgbq4cTqvSyYCgDfylE81WATztw3K95gx7TsvlG8GQ-OO4PYd'
+    '_csrf' => 'c1118fd4eb053a5f3cdbd69bbd7826f4945c43d6344459164d6d4090568a6179a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NY4jQlmKni5CVM6xyxVWoFnMYruOMPvQ\";}'
+    '_identity' => '1b83b5f6dcb335cfec411046518422e941ef82aaaeed713cd2f297e24e4404c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"cJIrTa_b2Hnjn6BZkrL8PJkYto2Ael3O\",2592000]\";}'
+    'login_aliyunid' => '\"df0****@service.aliyun.com\"'
+    'login_aliyunid_ticket' => 'dlDRRjf_8NpoU_BOTwChTBoNM1ZJeedfK9zxYnbN5hossqIZCr6t7SGxRigm2Cb4fGaCdBZWIzmgdHq6sXXZQg4KFWufyvpeV*0*Cm58slMT1tJw3_d$$RNZDh7ZZ3Yn*lHEBL6n3EozWFVp*VVx_l0e0'
+    'login_aliyunid_csrf' => '_csrf_tk_1623544206097632'
+    'login_aliyunid_suid' => '\" G/b5URTPPKk4Dh9Vx4uU/PLggKBpqU H/KgcowSbcKQh4l9evU=\"'
+    'login_aliyunid_pk' => '5264730847398936'
+    'login_aliyunid_pks' => '\"IV 2icYV2EmoqP6GC8 RhhSEFw/DY8DKgLWRz5ucKIxq/M=\"'
+    'login_aliyunid_token' => '\"VvlLUUAE/5nhc25cTsPh5X 7BRULA/wQlLY1EIspjRY=\"'
+    'hssid' => '6vHR43mK2Lrp8NuoaLx6W0g1'
+    'hsite' => '6'
+    'aliyun_country' => 'SG'
+    'aliyun_site' => 'INTL'
+    'aliyun_lang' => 'en'
+    'PHPSESSID' => '6cc3hbfd4hdgn5v7m4m82e41l4'
+    'Hm_lpvt_5fc7354aff3dd67a6435818b8ef02b52' => '1544244320'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'df'
+    'HOME' => '/Users/df'
+    'HTTP_COOKIE' => 'cnz=iwQxFLOQwEwCAYVLeCr1LGfI; UM_distinctid=16610682ac4ae-086b20786cc4f8-34687809-1fa400-16610682ac5229; _ga=GA1.2.1339553540.1538296801; CLOSE_HELP_GUIDE=true; rmStore=amid:43301; Hm_lvt_5fc7354aff3dd67a6435818b8ef02b52=1543550237; cna=ceSGFJYeBmICAXkAHcXzLJgx; ping_test=true; t=f4f90df9d4be1cc9113ef342262c23b0; _tb_token_=ee809fbe17963; cookie2=15235089a87093e621ea3442af547740; aliyun_choice=CN; dauth_proxy_token_name=login_aliyunid_ticket%2Cmini_login_aliyunid_ticket; dauth_proxy_encoding=UTF-8; dauth_sso_token=J1QvDz6eqkqzuOkx8DXLFaBzQL8Ca9G0xwhmKPu6ls83%2B2B7YyN1eeGmO%2FGFpNjquPD6K8OEEY21uotFYCvQMlppSMOSD6FllXNqSVjh4%2FWcXcLL3EvFnsJLVKYa7IiyA0OiobGIjcf%2FAe2z%2F25AGwCGY6h41m9kI%2B0WZgdzrKI8aPgpWTkU346xrz7xQBj3ae1iEcY%2BWgf1tgdOuT9iBRFqptmgXV490PZIZGryrtU8ZG%2BDfeq1ZQtJbEy%2Bd3pHui9Xdv6Vt3Q%3D; csg=8350855a; _gid=GA1.2.484687469.1544177410; isg=BPr6F_4xcn9nk_4Zgbq4cTqvSyYCgDfylE81WATztw3K95gx7TsvlG8GQ-OO4PYd; _csrf=c1118fd4eb053a5f3cdbd69bbd7826f4945c43d6344459164d6d4090568a6179a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NY4jQlmKni5CVM6xyxVWoFnMYruOMPvQ%22%3B%7D; _identity=1b83b5f6dcb335cfec411046518422e941ef82aaaeed713cd2f297e24e4404c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22cJIrTa_b2Hnjn6BZkrL8PJkYto2Ael3O%22%2C2592000%5D%22%3B%7D; Hm_lvt_5fc7354aff3dd67a6435818b8ef02b52=1543550237; login_aliyunid=\"df0****@service.aliyun.com\"; login_aliyunid_ticket=dlDRRjf_8NpoU_BOTwChTBoNM1ZJeedfK9zxYnbN5hossqIZCr6t7SGxRigm2Cb4fGaCdBZWIzmgdHq6sXXZQg4KFWufyvpeV*0*Cm58slMT1tJw3_d$$RNZDh7ZZ3Yn*lHEBL6n3EozWFVp*VVx_l0e0; login_aliyunid_csrf=_csrf_tk_1623544206097632; login_aliyunid_suid=\"+G/b5URTPPKk4Dh9Vx4uU/PLggKBpqU+H/KgcowSbcKQh4l9evU=\"; login_aliyunid_pk=5264730847398936; login_aliyunid_pks=\"IV+2icYV2EmoqP6GC8+RhhSEFw/DY8DKgLWRz5ucKIxq/M=\"; login_aliyunid_token=\"VvlLUUAE/5nhc25cTsPh5X+7BRULA/wQlLY1EIspjRY=\"; hssid=6vHR43mK2Lrp8NuoaLx6W0g1; hsite=6; aliyun_country=SG; aliyun_site=INTL; aliyun_lang=en; PHPSESSID=6cc3hbfd4hdgn5v7m4m82e41l4; Hm_lpvt_5fc7354aff3dd67a6435818b8ef02b52=1544244320; Hm_lpvt_5fc7354aff3dd67a6435818b8ef02b52=1544244545'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'dev.walle.edu.aliyun.com'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'dev.walle.edu.aliyun.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64059'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.12.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/df/work/www/walle-web/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/dist/css/bootstrap.min.css.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Users/df/work/www/walle-web/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1544244549.0497
+    'REQUEST_TIME' => 1544244549
+]
+2018-12-08 12:49:11 [127.0.0.1][1][6cc3hbfd4hdgn5v7m4m82e41l4][error][Exception] Exception: 初始化执行任务失败，还有未发布完成任务，请稍后重试！ in /Users/df/work/www/walle-web/components/Folder.php:50
+Stack trace:
+#0 /Users/df/work/www/walle-web/controllers/WalleController.php(83): app\components\Folder::instance(Object(app\models\Project), Object(app\models\Task))
+#1 [internal function]: app\controllers\WalleController->actionStartDeploy()
+#2 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('start-deploy', Array)
+#5 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('walle/start-dep...', Array)
+#6 /Users/df/work/www/walle-web/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/df/work/www/walle-web/web/index.php(11): yii\base\Application->run()
+#8 {main}
+2018-12-08 12:49:10 [127.0.0.1][1][6cc3hbfd4hdgn5v7m4m82e41l4][info][application] $_POST = [
+    'taskId' => '585'
+]
+
+$_COOKIE = [
+    'cnz' => 'iwQxFLOQwEwCAYVLeCr1LGfI'
+    'UM_distinctid' => '16610682ac4ae-086b20786cc4f8-34687809-1fa400-16610682ac5229'
+    '_ga' => 'GA1.2.1339553540.1538296801'
+    'CLOSE_HELP_GUIDE' => 'true'
+    'rmStore' => 'amid:43301'
+    'Hm_lvt_5fc7354aff3dd67a6435818b8ef02b52' => '1543550237'
+    'cna' => 'ceSGFJYeBmICAXkAHcXzLJgx'
+    'ping_test' => 'true'
+    't' => 'f4f90df9d4be1cc9113ef342262c23b0'
+    '_tb_token_' => 'ee809fbe17963'
+    'cookie2' => '15235089a87093e621ea3442af547740'
+    'aliyun_choice' => 'CN'
+    'dauth_proxy_token_name' => 'login_aliyunid_ticket,mini_login_aliyunid_ticket'
+    'dauth_proxy_encoding' => 'UTF-8'
+    'dauth_sso_token' => 'J1QvDz6eqkqzuOkx8DXLFaBzQL8Ca9G0xwhmKPu6ls83+2B7YyN1eeGmO/GFpNjquPD6K8OEEY21uotFYCvQMlppSMOSD6FllXNqSVjh4/WcXcLL3EvFnsJLVKYa7IiyA0OiobGIjcf/Ae2z/25AGwCGY6h41m9kI+0WZgdzrKI8aPgpWTkU346xrz7xQBj3ae1iEcY+Wgf1tgdOuT9iBRFqptmgXV490PZIZGryrtU8ZG+Dfeq1ZQtJbEy+d3pHui9Xdv6Vt3Q='
+    'csg' => '8350855a'
+    '_gid' => 'GA1.2.484687469.1544177410'
+    'isg' => 'BPr6F_4xcn9nk_4Zgbq4cTqvSyYCgDfylE81WATztw3K95gx7TsvlG8GQ-OO4PYd'
+    '_csrf' => 'c1118fd4eb053a5f3cdbd69bbd7826f4945c43d6344459164d6d4090568a6179a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NY4jQlmKni5CVM6xyxVWoFnMYruOMPvQ\";}'
+    '_identity' => '1b83b5f6dcb335cfec411046518422e941ef82aaaeed713cd2f297e24e4404c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"cJIrTa_b2Hnjn6BZkrL8PJkYto2Ael3O\",2592000]\";}'
+    'login_aliyunid' => '\"df0****@service.aliyun.com\"'
+    'login_aliyunid_ticket' => 'dlDRRjf_8NpoU_BOTwChTBoNM1ZJeedfK9zxYnbN5hossqIZCr6t7SGxRigm2Cb4fGaCdBZWIzmgdHq6sXXZQg4KFWufyvpeV*0*Cm58slMT1tJw3_d$$RNZDh7ZZ3Yn*lHEBL6n3EozWFVp*VVx_l0e0'
+    'login_aliyunid_csrf' => '_csrf_tk_1623544206097632'
+    'login_aliyunid_suid' => '\" G/b5URTPPKk4Dh9Vx4uU/PLggKBpqU H/KgcowSbcKQh4l9evU=\"'
+    'login_aliyunid_pk' => '5264730847398936'
+    'login_aliyunid_pks' => '\"IV 2icYV2EmoqP6GC8 RhhSEFw/DY8DKgLWRz5ucKIxq/M=\"'
+    'login_aliyunid_token' => '\"VvlLUUAE/5nhc25cTsPh5X 7BRULA/wQlLY1EIspjRY=\"'
+    'hssid' => '6vHR43mK2Lrp8NuoaLx6W0g1'
+    'hsite' => '6'
+    'aliyun_country' => 'SG'
+    'aliyun_site' => 'INTL'
+    'aliyun_lang' => 'en'
+    'PHPSESSID' => '6cc3hbfd4hdgn5v7m4m82e41l4'
+    'Hm_lpvt_5fc7354aff3dd67a6435818b8ef02b52' => '1544244545'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'df'
+    'HOME' => '/Users/df'
+    'HTTP_COOKIE' => 'cnz=iwQxFLOQwEwCAYVLeCr1LGfI; UM_distinctid=16610682ac4ae-086b20786cc4f8-34687809-1fa400-16610682ac5229; _ga=GA1.2.1339553540.1538296801; CLOSE_HELP_GUIDE=true; rmStore=amid:43301; Hm_lvt_5fc7354aff3dd67a6435818b8ef02b52=1543550237; cna=ceSGFJYeBmICAXkAHcXzLJgx; ping_test=true; t=f4f90df9d4be1cc9113ef342262c23b0; _tb_token_=ee809fbe17963; cookie2=15235089a87093e621ea3442af547740; aliyun_choice=CN; dauth_proxy_token_name=login_aliyunid_ticket%2Cmini_login_aliyunid_ticket; dauth_proxy_encoding=UTF-8; dauth_sso_token=J1QvDz6eqkqzuOkx8DXLFaBzQL8Ca9G0xwhmKPu6ls83%2B2B7YyN1eeGmO%2FGFpNjquPD6K8OEEY21uotFYCvQMlppSMOSD6FllXNqSVjh4%2FWcXcLL3EvFnsJLVKYa7IiyA0OiobGIjcf%2FAe2z%2F25AGwCGY6h41m9kI%2B0WZgdzrKI8aPgpWTkU346xrz7xQBj3ae1iEcY%2BWgf1tgdOuT9iBRFqptmgXV490PZIZGryrtU8ZG%2BDfeq1ZQtJbEy%2Bd3pHui9Xdv6Vt3Q%3D; csg=8350855a; _gid=GA1.2.484687469.1544177410; isg=BPr6F_4xcn9nk_4Zgbq4cTqvSyYCgDfylE81WATztw3K95gx7TsvlG8GQ-OO4PYd; _csrf=c1118fd4eb053a5f3cdbd69bbd7826f4945c43d6344459164d6d4090568a6179a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NY4jQlmKni5CVM6xyxVWoFnMYruOMPvQ%22%3B%7D; _identity=1b83b5f6dcb335cfec411046518422e941ef82aaaeed713cd2f297e24e4404c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22cJIrTa_b2Hnjn6BZkrL8PJkYto2Ael3O%22%2C2592000%5D%22%3B%7D; Hm_lvt_5fc7354aff3dd67a6435818b8ef02b52=1543550237; login_aliyunid=\"df0****@service.aliyun.com\"; login_aliyunid_ticket=dlDRRjf_8NpoU_BOTwChTBoNM1ZJeedfK9zxYnbN5hossqIZCr6t7SGxRigm2Cb4fGaCdBZWIzmgdHq6sXXZQg4KFWufyvpeV*0*Cm58slMT1tJw3_d$$RNZDh7ZZ3Yn*lHEBL6n3EozWFVp*VVx_l0e0; login_aliyunid_csrf=_csrf_tk_1623544206097632; login_aliyunid_suid=\"+G/b5URTPPKk4Dh9Vx4uU/PLggKBpqU+H/KgcowSbcKQh4l9evU=\"; login_aliyunid_pk=5264730847398936; login_aliyunid_pks=\"IV+2icYV2EmoqP6GC8+RhhSEFw/DY8DKgLWRz5ucKIxq/M=\"; login_aliyunid_token=\"VvlLUUAE/5nhc25cTsPh5X+7BRULA/wQlLY1EIspjRY=\"; hssid=6vHR43mK2Lrp8NuoaLx6W0g1; hsite=6; aliyun_country=SG; aliyun_site=INTL; aliyun_lang=en; PHPSESSID=6cc3hbfd4hdgn5v7m4m82e41l4; Hm_lpvt_5fc7354aff3dd67a6435818b8ef02b52=1544244545; Hm_lpvt_5fc7354aff3dd67a6435818b8ef02b52=1544244549'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://dev.walle.edu.aliyun.com/walle/deploy?taskId=585'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://dev.walle.edu.aliyun.com'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONTENT_LENGTH' => '10'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'dev.walle.edu.aliyun.com'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'dev.walle.edu.aliyun.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64059'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.12.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/df/work/www/walle-web/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/walle/start-deploy'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '10'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Users/df/work/www/walle-web/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1544244550.5207
+    'REQUEST_TIME' => 1544244550
+]

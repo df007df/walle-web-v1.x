@@ -9,7 +9,6 @@
 namespace app\components;
 
 use app\models\Record;
-use app\models\Task;
 use Yii;
 use app\models\Project;
 use app\models\Task as TaskModel;
@@ -21,7 +20,7 @@ class Folder extends Ansible
      * @param $config \yii\db\ActiveQuery
      * @return Folder
      */
-    public static function instance($config, Task $task)
+    public static function instance($config, TaskModel $task)
     {
 
         $isRsync = $config->rsync;
@@ -29,14 +28,14 @@ class Folder extends Ansible
         if ($isRsync == 1) {
 
             //检查还有其他发布
-            $taskMode = Task::find()->where("project_id = :project_id AND id < :taskid ", [
+            $taskMode = TaskModel::find()->where("project_id = :project_id AND id < :taskid ", [
                 ':project_id' => $config->id,
                 ':taskid' => $task->id,
             ])->orderBy('id desc')->one();
 
             $folder = new FolderRsync($config);
 
-            if ($taskMode->status != Task::STATUS_DONE) {
+            if ($taskMode->status != TaskModel::STATUS_DONE) {
 
                 $task->status = TaskModel::STATUS_FAILED;
                 $task->save();
